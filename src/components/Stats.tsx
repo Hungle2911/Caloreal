@@ -9,7 +9,7 @@ import {
 import { useStatsContext } from "../contexts/StatsProvider";
 
 const Stats = () => {
-  const { state, dispatch } = useStatsContext();
+  const { state } = useStatsContext();
 
   return (
     <>
@@ -108,6 +108,8 @@ const Stats = () => {
       <LinearProgress
         variant="determinate"
         sx={{ height: 15, mt: 2, borderRadius: 30 }}
+        value={(state.calorieTotal / state.calorieLimit) * 100}
+        valueBuffer={100}
       />
     </>
   );

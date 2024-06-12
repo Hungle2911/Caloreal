@@ -7,13 +7,13 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
-import React from "react";
+
 import FoodItem from "./FoodItem";
 import { useStatsContext } from "../contexts/StatsProvider";
 
 const FilterMeal = () => {
   const options = ["Egg", "Rice"];
-  const { state, dispatch } = useStatsContext();
+  const { dispatch } = useStatsContext();
   const addCalorie = () => {
     dispatch({ type: "ADD_CALORIE_ENTRY" });
   };
