@@ -2,13 +2,15 @@ import {
   Box,
   Card,
   CardContent,
-  Container,
   Grid,
   LinearProgress,
   Typography,
 } from "@mui/material";
+import { useStatsContext } from "../contexts/StatsProvider";
 
 const Stats = () => {
+  const { state, dispatch } = useStatsContext();
+
   return (
     <>
       <Grid container spacing={2}>
@@ -23,7 +25,7 @@ const Stats = () => {
                 height="100%"
               >
                 <Typography variant="h5" fontWeight={700}>
-                  2000
+                  {state.calorieLimit}
                 </Typography>
                 <Typography variant="h6">Daily Calorie Limit</Typography>
               </Box>
@@ -41,7 +43,7 @@ const Stats = () => {
                 height="100%"
               >
                 <Typography variant="h5" fontWeight={700}>
-                  2000
+                  {state.calorieRemain}
                 </Typography>
                 <Typography variant="h6">Calories Remaining</Typography>
               </Box>
@@ -59,7 +61,7 @@ const Stats = () => {
                 height="100%"
               >
                 <Typography variant="h5" fontWeight={700}>
-                  200
+                  {state.calorieTotal}
                 </Typography>
                 <Typography variant="h6">Gain/Loss</Typography>
               </Box>
@@ -77,7 +79,7 @@ const Stats = () => {
                 height="100%"
               >
                 <Typography variant="h5" fontWeight={700}>
-                  200
+                  {state.calorieConsumed}
                 </Typography>
                 <Typography variant="h6">Calories Consumed</Typography>
               </Box>
@@ -95,7 +97,7 @@ const Stats = () => {
                 height="100%"
               >
                 <Typography variant="h5" fontWeight={700}>
-                  200
+                  {state.calorieBurned}
                 </Typography>
                 <Typography variant="h6">Calories Burned</Typography>
               </Box>

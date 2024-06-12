@@ -9,9 +9,14 @@ import {
 } from "@mui/material";
 import React from "react";
 import FoodItem from "./FoodItem";
+import { useStatsContext } from "../contexts/StatsProvider";
 
 const FilterMeal = () => {
   const options = ["Egg", "Rice"];
+  const { state, dispatch } = useStatsContext();
+  const addCalorie = () => {
+    dispatch({ type: "ADD_CALORIE_ENTRY" });
+  };
   return (
     <>
       <Container sx={{ mt: 5 }}>
@@ -44,6 +49,7 @@ const FilterMeal = () => {
               paddingX: 3,
               height: "100%",
             }}
+            onClick={addCalorie}
           >
             Add Meal
           </Button>

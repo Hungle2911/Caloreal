@@ -21,7 +21,7 @@ const FoodItem = () => {
           >
             350
           </Box>
-          <IconButton color="error" size="small" sx={{ mx: 2 }}>
+          <IconButton size="small" sx={{ mx: 2 }}>
             <DeleteIcon />
           </IconButton>
         </Box>
