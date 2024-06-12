@@ -1,9 +1,14 @@
-import Header from "../components/Header"
+import Header from "../components/Header";
+import Stats from "../components/Stats";
 
 const MainPage = () => {
   return (
-    <Header />
-  )
-}
+    <>
+      <Header />
 
-export default MainPage
+      <Stats />
+    </>
+  );
+};
+
+export default MainPage;
